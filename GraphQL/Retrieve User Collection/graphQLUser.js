@@ -43,9 +43,9 @@ const RootQuery = new GraphQLObjectType({
     fields: {
         user: {
             type: UserType,
-            args: { id: { type: GraphQLID } },
+            args: { _id: { type: GraphQLID } },
             resolve(parent, args) {
-                return User.findById(args.id);
+                return User.findById(args._id);
             },
         },
         users: {
@@ -56,6 +56,7 @@ const RootQuery = new GraphQLObjectType({
         },
     },
 });
+
 
 // Mutation
 const Mutation = new GraphQLObjectType({
@@ -110,10 +111,18 @@ app.listen(4000, () => {
 //     }
 //   }
 
+//Retrieval
+//---------------------
 // {
 //     users {
 //       id
 //       name
 //       email
 //     }
-//   }
+
+// {
+//     user(_id: "6817a0d4d8df76c4bbc7a5ee") {
+//       name
+//       email
+//     }
+// }
