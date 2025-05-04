@@ -1,1 +1,1 @@
-# GraphQLExamples
+# GraphQLExamples Tutorial
