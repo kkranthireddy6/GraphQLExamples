@@ -1,3 +1,7 @@
+//mkdir graphql-api && cd graphql-api
+//npm init -y
+//npm install express express-graphql graphql mongoose
+
 // db.js
 const mongoose = require('mongoose');
 
